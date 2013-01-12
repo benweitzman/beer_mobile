@@ -27,6 +27,13 @@
 		B5567B5516A1064C0082335F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5567B5416A1064C0082335F /* SearchViewController.m */; };
 		B5567B5916A10C9D0082335F /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5567B5816A10C9D0082335F /* ResultsViewController.m */; };
 		B5567B6416A110AC0082335F /* BeerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5567B6316A110AC0082335F /* BeerViewController.m */; };
+		B5567B6716A125D30082335F /* beer.png in Resources */ = {isa = PBXBuildFile; fileRef = B5567B6616A125D30082335F /* beer.png */; };
+		B5567B6916A125D90082335F /* beer-mug.png in Resources */ = {isa = PBXBuildFile; fileRef = B5567B6816A125D90082335F /* beer-mug.png */; };
+		B5567B6F16A127870082335F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5567B6C16A127870082335F /* SVProgressHUD.bundle */; };
+		B5567B7016A127870082335F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B5567B6E16A127870082335F /* SVProgressHUD.m */; };
+		B5567B7416A12C040082335F /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = B5567B7316A12C040082335F /* history.png */; };
+		B5567B7616A1329D0082335F /* navy_blue@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = B5567B7516A1329D0082335F /* navy_blue@2X.png */; };
+		B5567B7816A132A20082335F /* navy_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = B5567B7716A132A20082335F /* navy_blue.png */; };
 		F99811B6727D4D6D91C74989 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CE2FA7A06043069DFB9B15 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +78,14 @@
 		B5567B5816A10C9D0082335F /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		B5567B6216A110AC0082335F /* BeerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerViewController.h; sourceTree = "<group>"; };
 		B5567B6316A110AC0082335F /* BeerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerViewController.m; sourceTree = "<group>"; };
+		B5567B6616A125D30082335F /* beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer.png; sourceTree = "<group>"; };
+		B5567B6816A125D90082335F /* beer-mug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beer-mug.png"; sourceTree = "<group>"; };
+		B5567B6C16A127870082335F /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		B5567B6D16A127870082335F /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		B5567B6E16A127870082335F /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		B5567B7316A12C040082335F /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		B5567B7516A1329D0082335F /* navy_blue@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navy_blue@2X.png"; sourceTree = "<group>"; };
+		B5567B7716A132A20082335F /* navy_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navy_blue.png; sourceTree = "<group>"; };
 		E6771FED3BF44E37996D8482 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		E8CE2FA7A06043069DFB9B15 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +118,8 @@
 		B53EC59316A0D10B0098ABC0 = {
 			isa = PBXGroup;
 			children = (
+				B5567B6A16A127750082335F /* external sources */,
+				B5567B6516A125C50082335F /* images */,
 				B53EC5A816A0D10C0098ABC0 /* beer */,
 				B53EC5CC16A0D10C0098ABC0 /* beerTests */,
 				B53EC5A116A0D10C0098ABC0 /* Frameworks */,
@@ -186,6 +203,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B5567B6516A125C50082335F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B5567B7716A132A20082335F /* navy_blue.png */,
+				B5567B7516A1329D0082335F /* navy_blue@2X.png */,
+				B5567B7316A12C040082335F /* history.png */,
+				B5567B6816A125D90082335F /* beer-mug.png */,
+				B5567B6616A125D30082335F /* beer.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		B5567B6A16A127750082335F /* external sources */ = {
+			isa = PBXGroup;
+			children = (
+				B5567B6B16A127870082335F /* SVProgressHUD */,
+			);
+			name = "external sources";
+			sourceTree = "<group>";
+		};
+		B5567B6B16A127870082335F /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B5567B6C16A127870082335F /* SVProgressHUD.bundle */,
+				B5567B6D16A127870082335F /* SVProgressHUD.h */,
+				B5567B6E16A127870082335F /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +310,12 @@
 				B53EC5B716A0D10C0098ABC0 /* Default@2x.png in Resources */,
 				B53EC5B916A0D10C0098ABC0 /* Default-568h@2x.png in Resources */,
 				B53EC5BC16A0D10C0098ABC0 /* MainStoryboard.storyboard in Resources */,
+				B5567B6716A125D30082335F /* beer.png in Resources */,
+				B5567B6916A125D90082335F /* beer-mug.png in Resources */,
+				B5567B6F16A127870082335F /* SVProgressHUD.bundle in Resources */,
+				B5567B7416A12C040082335F /* history.png in Resources */,
+				B5567B7616A1329D0082335F /* navy_blue@2X.png in Resources */,
+				B5567B7816A132A20082335F /* navy_blue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +371,7 @@
 				B5567B5516A1064C0082335F /* SearchViewController.m in Sources */,
 				B5567B5916A10C9D0082335F /* ResultsViewController.m in Sources */,
 				B5567B6416A110AC0082335F /* BeerViewController.m in Sources */,
+				B5567B7016A127870082335F /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

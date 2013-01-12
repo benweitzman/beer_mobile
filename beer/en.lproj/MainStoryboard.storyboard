@@ -50,24 +50,42 @@
                                     <action selector="search:" destination="JSR-jy-FUN" eventType="touchUpInside" id="JS9-mU-26l"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="beer-mug.png" translatesAutoresizingMaskIntoConstraints="NO" id="ss7-V9-PJY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="5Q9-2P-yPw"/>
+                                    <constraint firstAttribute="height" constant="80" id="5wP-MY-JKy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="beer.png" translatesAutoresizingMaskIntoConstraints="NO" id="oUD-Bx-Jl2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="0a2-S5-5Ap"/>
+                                    <constraint firstAttribute="height" constant="62" id="NkB-d9-qob"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KfY-3N-HZZ" secondAttribute="trailing" constant="5" id="31Q-KP-bDY"/>
                             <constraint firstItem="cFC-Vy-jNE" firstAttribute="top" secondItem="pzW-XE-pjQ" secondAttribute="top" constant="175" id="3JH-DY-bZw"/>
+                            <constraint firstAttribute="bottom" secondItem="oUD-Bx-Jl2" secondAttribute="bottom" constant="159" id="4ks-7z-nnJ"/>
+                            <constraint firstItem="oUD-Bx-Jl2" firstAttribute="centerX" secondItem="pzW-XE-pjQ" secondAttribute="centerX" type="default" id="5Ay-N9-4Ld"/>
                             <constraint firstItem="cFC-Vy-jNE" firstAttribute="leading" secondItem="pzW-XE-pjQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5UM-Y9-eyn"/>
                             <constraint firstItem="KfY-3N-HZZ" firstAttribute="baseline" secondItem="cFC-Vy-jNE" secondAttribute="baseline" type="default" id="UIQ-hn-Ww7"/>
                             <constraint firstItem="KfY-3N-HZZ" firstAttribute="top" secondItem="pzW-XE-pjQ" secondAttribute="top" constant="168" id="eab-s2-aEO"/>
+                            <constraint firstAttribute="bottom" secondItem="ss7-V9-PJY" secondAttribute="bottom" constant="149" id="qeC-wH-YEX"/>
+                            <constraint firstItem="ss7-V9-PJY" firstAttribute="leading" secondItem="pzW-XE-pjQ" secondAttribute="leading" constant="128" id="w6f-tX-2Pp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Beer" id="xtE-0O-Z6Q">
-                        <barButtonItem key="rightBarButtonItem" systemItem="rewind" id="6tR-l2-tQd">
+                        <barButtonItem key="leftBarButtonItem" image="history.png" style="plain" id="6tR-l2-tQd">
                             <connections>
                                 <segue destination="oh5-Ej-K75" kind="modal" id="n6J-Ps-6Jc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="beerImage" destination="oUD-Bx-Jl2" id="BKx-xK-pT0"/>
+                        <outlet property="beerMugImage" destination="ss7-V9-PJY" id="CWN-GU-yVT"/>
                         <outlet property="searchBar" destination="cFC-Vy-jNE" id="87Y-FJ-D7w"/>
                         <outlet property="searchButton" destination="KfY-3N-HZZ" id="aCs-ZO-2fa"/>
                         <segue destination="lC4-6M-xlY" kind="push" identifier="showResultsSegue" id="B5k-Mz-y8X"/>
@@ -256,6 +274,11 @@
             <point key="canvasLocation" x="1649" y="-78"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="beer-mug.png" width="102" height="121"/>
+        <image name="beer.png" width="44" height="100"/>
+        <image name="history.png" width="20" height="20"/>
+    </resources>
     <classes>
         <class className="BeerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BeerViewController.h"/>
@@ -282,6 +305,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
             <relationships>
                 <relationship kind="action" name="search:"/>
+                <relationship kind="outlet" name="beerImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="beerMugImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="searchBar" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
             </relationships>

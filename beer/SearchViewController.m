@@ -19,7 +19,7 @@
 
 @implementation SearchViewController
 
-@synthesize searchBar, searchButton;
+@synthesize searchBar, searchButton, beerImage, beerMugImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +33,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"navy_blue.png"]]];
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [beerImage setHidden:NO];
+    [beerMugImage setHidden:NO];
+//    UIImage *beerImage_ = [[UIImage imageNamed:@"beer.png"]
+//                           resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+//    [beerImage setImage:beerImage_];
+    CGRect beerFrame = [beerImage frame];
+    [beerImage setFrame:CGRectMake(beerFrame.origin.x, beerFrame.origin.y+beerFrame.size.height,beerFrame.size.width,0)];
+    [UIView beginAnimations:@"ToggleViews" context:nil];
+    [UIView setAnimationDuration:1.0];
+    [UIView setAnimationRepeatCount:100];
+    [UIView setAnimationRepeatAutoreverses:YES];
+    
+    // Make the animatable changes.
+    [beerImage setFrame:CGRectMake(beerFrame.origin.x, beerFrame.origin.y, beerFrame.size.width,beerFrame.size.height)];
+
+    
+    // Commit the changes and perform the animation.
+    [UIView commitAnimations];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,6 +73,7 @@
 
 - (IBAction)search:(id)sender {
     NSString *beerName = searchBar.text;
+    [searchBar resignFirstResponder];
     //init the http engine, supply the web host
     //and also a dictionary with http headers you want to send
     MKNetworkEngine* engine = [[MKNetworkEngine alloc]

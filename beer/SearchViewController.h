@@ -12,5 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *searchBar;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 - (IBAction)search:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *beerMugImage;
+@property (weak, nonatomic) IBOutlet UIImageView *beerImage;
 
 @end
