@@ -10,4 +10,10 @@
 
 @interface BeerViewController : UIViewController
 
+@property (strong, nonatomic) NSDictionary *beerInfo;
+@property (weak, nonatomic) IBOutlet UILabel *abvLabel;
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *beerImageView;
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+
 @end

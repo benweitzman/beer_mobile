@@ -7,12 +7,18 @@
 //
 
 #import "ResultsViewController.h"
+#import "BeerViewController.h"
+#import <MKNetworkKit.h>
 
 @interface ResultsViewController ()
+{
+    NSDictionary *beerInfo;
+}
 
 @end
 
 @implementation ResultsViewController
+@synthesize results;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,24 +50,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [results count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     // Configure the cell...
+    NSDictionary *result = results[indexPath.row];
+    [cell.textLabel setText:result[@"name"]];
     
     return cell;
 }
@@ -105,17 +113,45 @@
 }
 */
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showBeerDetailSegue"]) {
+        BeerViewController *beerVC = (BeerViewController *)[segue destinationViewController];
+        beerVC.beerInfo = beerInfo;
+    }
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    NSString *beerURL = results[indexPath.row][@"url"];
+    NSLog(@"%@",beerURL);
+    MKNetworkEngine* engine = [[MKNetworkEngine alloc]
+                               initWithHostName:@"localhost:5000" customHeaderFields:nil];
+    
+    //request parameters
+    //these would be your GET or POST variables
+    NSMutableDictionary* params = [@{@"beer_url":beerURL} mutableCopy];
+    //create operation with the host relative path, the params
+    //also method (GET,POST,HEAD,etc) and whether you want SSL or not
+    MKNetworkOperation* op = [engine
+                              operationWithPath:@"get_beer"
+                              params:params
+                              httpMethod:@"GET" ssl:NO];
+    
+    //set completion and error blocks
+    [op onCompletion:^(MKNetworkOperation *completedOperation) {
+        NSLog(@"json: %@", [op responseJSON]);
+        beerInfo = (NSDictionary *)[op responseJSON];
+        [self performSegueWithIdentifier:@"showBeerDetailSegue" sender:self];
+    } onError:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+    
+    //add to the http queue and the request is sent
+    [engine enqueueOperation: op];
+
+    
 }
 
 @end

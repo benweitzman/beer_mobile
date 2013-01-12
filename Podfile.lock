@@ -1,0 +1,14 @@
+
+DEPENDENCIES: 
+- MKNetworkKit
+
+SPEC CHECKSUMS: 
+  Reachability: 1c8584c5f26fa776695efef95caaa50402c94cfb
+  MKNetworkKit: 3d3c415ced5fa3f896fd0319820b7832103c2f81
+
+PODS: 
+- MKNetworkKit (0.87): 
+  - Reachability (~> 3.0)
+- Reachability (3.1.0)
+
+COCOAPODS: 0.16.0

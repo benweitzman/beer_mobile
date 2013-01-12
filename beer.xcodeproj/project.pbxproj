@@ -23,6 +23,11 @@
 		B53EC5C916A0D10C0098ABC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53EC5A416A0D10C0098ABC0 /* Foundation.framework */; };
 		B53EC5D116A0D10C0098ABC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B53EC5CF16A0D10C0098ABC0 /* InfoPlist.strings */; };
 		B53EC5D416A0D10C0098ABC0 /* beerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B53EC5D316A0D10C0098ABC0 /* beerTests.m */; };
+		B5567B4A16A0FA4E0082335F /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5567B4916A0FA4E0082335F /* HistoryViewController.m */; };
+		B5567B5516A1064C0082335F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5567B5416A1064C0082335F /* SearchViewController.m */; };
+		B5567B5916A10C9D0082335F /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5567B5816A10C9D0082335F /* ResultsViewController.m */; };
+		B5567B6416A110AC0082335F /* BeerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5567B6316A110AC0082335F /* BeerViewController.m */; };
+		F99811B6727D4D6D91C74989 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CE2FA7A06043069DFB9B15 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,16 @@
 		B53EC5D016A0D10C0098ABC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B53EC5D216A0D10C0098ABC0 /* beerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = beerTests.h; sourceTree = "<group>"; };
 		B53EC5D316A0D10C0098ABC0 /* beerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = beerTests.m; sourceTree = "<group>"; };
+		B5567B4816A0FA4E0082335F /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		B5567B4916A0FA4E0082335F /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		B5567B5316A1064C0082335F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		B5567B5416A1064C0082335F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		B5567B5716A10C9D0082335F /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		B5567B5816A10C9D0082335F /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		B5567B6216A110AC0082335F /* BeerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerViewController.h; sourceTree = "<group>"; };
+		B5567B6316A110AC0082335F /* BeerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerViewController.m; sourceTree = "<group>"; };
+		E6771FED3BF44E37996D8482 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		E8CE2FA7A06043069DFB9B15 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +83,7 @@
 				B53EC5A316A0D10C0098ABC0 /* UIKit.framework in Frameworks */,
 				B53EC5A516A0D10C0098ABC0 /* Foundation.framework in Frameworks */,
 				B53EC5A716A0D10C0098ABC0 /* CoreGraphics.framework in Frameworks */,
+				F99811B6727D4D6D91C74989 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +107,7 @@
 				B53EC5CC16A0D10C0098ABC0 /* beerTests */,
 				B53EC5A116A0D10C0098ABC0 /* Frameworks */,
 				B53EC59F16A0D10C0098ABC0 /* Products */,
+				E6771FED3BF44E37996D8482 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +127,7 @@
 				B53EC5A416A0D10C0098ABC0 /* Foundation.framework */,
 				B53EC5A616A0D10C0098ABC0 /* CoreGraphics.framework */,
 				B53EC5C616A0D10C0098ABC0 /* SenTestingKit.framework */,
+				E8CE2FA7A06043069DFB9B15 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +138,14 @@
 				B53EC5B116A0D10C0098ABC0 /* AppDelegate.h */,
 				B53EC5B216A0D10C0098ABC0 /* AppDelegate.m */,
 				B53EC5BA16A0D10C0098ABC0 /* MainStoryboard.storyboard */,
+				B5567B5716A10C9D0082335F /* ResultsViewController.h */,
+				B5567B5816A10C9D0082335F /* ResultsViewController.m */,
+				B5567B6216A110AC0082335F /* BeerViewController.h */,
+				B5567B6316A110AC0082335F /* BeerViewController.m */,
+				B5567B4816A0FA4E0082335F /* HistoryViewController.h */,
+				B5567B4916A0FA4E0082335F /* HistoryViewController.m */,
+				B5567B5316A1064C0082335F /* SearchViewController.h */,
+				B5567B5416A1064C0082335F /* SearchViewController.m */,
 				B53EC5BD16A0D10C0098ABC0 /* ViewController.h */,
 				B53EC5BE16A0D10C0098ABC0 /* ViewController.m */,
 				B53EC5A916A0D10C0098ABC0 /* Supporting Files */,
@@ -170,6 +196,7 @@
 				B53EC59A16A0D10C0098ABC0 /* Sources */,
 				B53EC59B16A0D10C0098ABC0 /* Frameworks */,
 				B53EC59C16A0D10C0098ABC0 /* Resources */,
+				AABB9D61D58D4B118D68247A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		AABB9D61D58D4B118D68247A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		B53EC5C316A0D10C0098ABC0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +314,10 @@
 				B53EC5AF16A0D10C0098ABC0 /* main.m in Sources */,
 				B53EC5B316A0D10C0098ABC0 /* AppDelegate.m in Sources */,
 				B53EC5BF16A0D10C0098ABC0 /* ViewController.m in Sources */,
+				B5567B4A16A0FA4E0082335F /* HistoryViewController.m in Sources */,
+				B5567B5516A1064C0082335F /* SearchViewController.m in Sources */,
+				B5567B5916A10C9D0082335F /* ResultsViewController.m in Sources */,
+				B5567B6416A110AC0082335F /* BeerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +419,7 @@
 		};
 		B53EC5D816A0D10C0098ABC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6771FED3BF44E37996D8482 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "beer/beer-Prefix.pch";
@@ -385,6 +431,7 @@
 		};
 		B53EC5D916A0D10C0098ABC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6771FED3BF44E37996D8482 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "beer/beer-Prefix.pch";
@@ -447,6 +494,7 @@
 				B53EC5D916A0D10C0098ABC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B53EC5DA16A0D10C0098ABC0 /* Build configuration list for PBXNativeTarget "beerTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +503,7 @@
 				B53EC5DC16A0D10C0098ABC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *searchBar;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+- (IBAction)search:(id)sender;
 
 @end
